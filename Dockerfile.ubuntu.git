@@ -35,7 +35,7 @@ WORKDIR $HOME
 USER root
 ### Add all install scripts for further steps
 
-RUN apt-get install git
+RUN apt-get update && apt-get install -y git
 
 ### configure startup
 RUN $INST_SCRIPTS/libnss_wrapper.sh
